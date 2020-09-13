@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity ="start" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <View
+                android:id="@+id/viewone"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:background="@drawable/topview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+            <TextView
+                android:id="@+id/covidinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/aclonica"
+                android:text="CORONAVIRUS(COVID-19)"
+                android:textAlignment="center"
+                android:textColor="#F44336"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewone"
+                app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="38dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/covidinfo"
+                app:srcCompat="@drawable/tsmap" />
+
+            <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F17953"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:navigationIcon="@drawable/menu" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/mainpage"
+                android:fontFamily="@font/adamina"
+                android:text="The disease caused by the novel coronavirus first identified in Wuhan, China, has been named coronavirus disease 2019 (COVID-19) – ‘CO’ stands for corona, ‘VI’ for virus, and ‘D’ for disease.\nThe COVID-19 virus is a new virus linked to the same family of viruses as Severe Acute Respiratory Syndrome (SARS) and some types of common cold.\n\nThe virus is transmitted through direct contact with respiratory droplets of an infected person (generated through coughing and sneezing), and touching surfaces contaminated with the virus. The COVID-19 virus may survive on surfaces for several hours, but simple disinfectants can kill it."
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="170dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:text="Symptoms"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            <LinearLayout
+                android:id="@+id/mainlayout1"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView27">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mediacolor">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gif1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/light_tiredness" />
+
+                        <TextView
+                            android:id="@+id/tiredtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gif1"
+                            android:layout_centerHorizontal="true"
+                            android:text="Tiredness"
+
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mediacolor">
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gif2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/fever" />
+
+                        <TextView
+                            android:id="@+id/fevertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gif2"
+                            android:layout_centerHorizontal="true"
+                            android:text="Fever"
+
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mainlayout2"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mainlayout1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mediacolor">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gif3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/light_cough" />
+
+                        <TextView
+                            android:id="@+id/coughtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gif3"
+                            android:layout_centerHorizontal="true"
+                            android:text="Dry Cough"
+
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/mybuttonpass"
+                android:text="Difficulty breathing or shortness of breath\n\nChest pain or pressure\n\nSore throat"
+                android:textAlignment="center"
+                android:textColor="#F44336"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainlayout2" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="176dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:text="Precautions"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/mybuttonpass2"
+                android:fontFamily="@font/cambay"
+                android:text="1.Wash your hands frequently using soap and water or an alcohol-based hand rub.\n\n2.Avoid close contact with anyone who has cold or flu-like symptoms.\n\n3.Cover mouth and nose with flexed elbow or tissue when coughing or sneezing. Dispose used tissue immediately.\n\n4.Seek medical care early if you or your child has a fever, cough or difficulty breathing."
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
